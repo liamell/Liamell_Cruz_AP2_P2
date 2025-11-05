@@ -1,4 +1,4 @@
-package edu.ucne.liamell_cruz_ap2_p2.ui.theme.di
+package edu.ucne.liamell_cruz_ap2_p2.di
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
