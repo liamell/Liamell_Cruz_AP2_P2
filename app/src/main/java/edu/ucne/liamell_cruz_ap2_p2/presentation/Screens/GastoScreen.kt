@@ -11,6 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import edu.ucne.liamell_cruz_ap2_p2.data.remote.dto.GastoDto
+import edu.ucne.liamell_cruz_ap2_p2.presentation.GastoViewModel
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 

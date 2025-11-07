@@ -1,4 +1,4 @@
-package edu.ucne.liamell_cruz_ap2_p2.presentation.navigation
+package edu.ucne.liamell_cruz_ap2_p2.presentation.Screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import edu.ucne.liamell_cruz_ap2_p2.data.remote.dto.GastoDto
-import edu.ucne.liamell_cruz_ap2_p2.ui.gastos.GastoViewModel
+import edu.ucne.liamell_cruz_ap2_p2.presentation.GastoViewModel
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -67,7 +67,7 @@ fun AgregarGastoScreen(
 
             Button(
                 onClick = {
-                    // Usar fecha actual en ISO-8601
+
                     val fechaActual = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
                     val gasto = GastoDto(
                         gastoId = 0,

@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import edu.ucne.liamell_cruz_ap2_p2.data.remote.dto.GastoApi
+import edu.ucne.liamell_cruz_ap2_p2.data.remote.GastoApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
