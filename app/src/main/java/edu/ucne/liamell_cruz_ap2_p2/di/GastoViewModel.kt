@@ -9,6 +9,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import android.util.Log
+
 
 @HiltViewModel
 class GastoViewModel @Inject constructor(
@@ -17,6 +19,10 @@ class GastoViewModel @Inject constructor(
 
     private val _gastos = MutableStateFlow<List<GastoDto>>(emptyList())
     val gastos = _gastos.asStateFlow()
+
+    init {
+        cargarGastos()
+    }
 
     fun cargarGastos() {
         viewModelScope.launch {
@@ -27,4 +33,19 @@ class GastoViewModel @Inject constructor(
             }
         }
     }
+
+    fun guardarGasto(gasto: GastoDto) {
+        viewModelScope.launch {
+            try {
+                repository.addGasto(gasto)
+                cargarGastos()
+            } catch (e: Exception) {
+                Log.e("GastoViewModel", "Error al guardar gasto", e)
+            }
+        }
+    }
+
+
+
+
 }
