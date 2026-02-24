@@ -1,6 +1,6 @@
 package edu.ucne.liamell_cruz_ap2_p2.data.remote.dto
 
-data class GastoDto(
+data class GastoResponse(
     val gastoId: Int,
     val fecha: String,
     val suplidor: String,
@@ -8,6 +8,3 @@ data class GastoDto(
     val itbis: Double,
     val monto: Double
 )
-
-
-
